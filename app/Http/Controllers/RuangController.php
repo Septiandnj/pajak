@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\fungsiruang;
+use Alert;
 
 class RuangController extends Controller
 {
@@ -15,7 +16,7 @@ class RuangController extends Controller
     public function index()
     {
         //
-        $ruang=fungsiruang::all();
+        $ruang=fungsiruang::paginate(4);
         return view('ruang.index',compact('ruang'));
     }
 
@@ -48,7 +49,7 @@ class RuangController extends Controller
         $ruang->kawasan = $request->kawasan;
         $ruang->skor = $request->skor;
         $ruang->save();
-
+        Alert::success('Menambah Data', 'Berhasil')->autoclose(2000);
         return redirect('ruang');
     }
 
@@ -95,7 +96,7 @@ class RuangController extends Controller
         $ruang->kawasan = $request->kawasan;
         $ruang->skor = $request->skor;
         $ruang->save();
-
+        Alert::success('Mengubah Data', 'Berhasil')->autoclose(2000);
         return redirect('ruang');
     }
 
@@ -110,6 +111,7 @@ class RuangController extends Controller
         //
         $ruang = fungsiruang::findOrFail($id);
         $ruang->delete();
+        Alert::success('Menghapus Data', 'Berhasil')->autoclose(2000);
         return redirect('ruang');
     }
 }

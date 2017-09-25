@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Reklame;
+use Alert;
 
 class JenisController extends Controller
 {
@@ -15,7 +16,7 @@ class JenisController extends Controller
     public function index()
     {
         //
-        $reklame=Reklame::all();
+        $reklame=Reklame::paginate(4);
         return view('jenis.index',compact('reklame'));
     }
 
@@ -55,6 +56,7 @@ class JenisController extends Controller
         $reklame->ket = $request->ket;
         $reklame->save();
 
+        Alert::success('Menambah Data', 'Berhasil')->autoclose(2000);
         return redirect('jenis');
     }
 
@@ -107,7 +109,7 @@ class JenisController extends Controller
         $reklame->dasar3 = $request->dasar3;
         $reklame->ket = $request->ket;
         $reklame->save();
-
+        Alert::success('Mengubah Data', 'Berhasil')->autoclose(2000);
         return redirect('jenis');
     }
 
@@ -122,6 +124,7 @@ class JenisController extends Controller
         //
         $reklame = Reklame::findOrFail($id);
         $reklame->delete();
+        Alert::success('Menghapus Data', 'Berhasil')->autoclose(2000);
         return redirect('jenis');
     }
 }

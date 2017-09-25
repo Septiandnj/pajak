@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\sudutpandang;
+use Alert;
 
 class SudutController extends Controller
 {
@@ -15,7 +16,7 @@ class SudutController extends Controller
     public function index()
     {
         //
-        $sudut=sudutpandang::all();
+        $sudut=sudutpandang::paginate(4);
         return view('sudut.index',compact('sudut'));
     }
 
@@ -48,7 +49,7 @@ class SudutController extends Controller
         $sudut->arah = $request->arah;
         $sudut->skor = $request->skor;
         $sudut->save();
-
+        Alert::success('Menambah Data', 'Berhasil')->autoclose(2000);
         return redirect('sudut');
     }
 
@@ -95,7 +96,7 @@ class SudutController extends Controller
         $sudut->arah = $request->arah;
         $sudut->skor = $request->skor;
         $sudut->save();
-
+        Alert::success('Mengubah Data', 'Berhasil')->autoclose(2000);
         return redirect('sudut');
     }
 
@@ -110,6 +111,7 @@ class SudutController extends Controller
         //
         $sudut = sudutpandang::findOrFail($id);
         $sudut->delete();
+        Alert::success('Menghapus Data', 'Berhasil')->autoclose(2000);
         return redirect('sudut');
     }
 }

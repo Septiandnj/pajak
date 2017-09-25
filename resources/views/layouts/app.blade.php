@@ -13,10 +13,12 @@
         <!-- Styles -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
+
         <!-- Styles -->
         <link rel="stylesheet" type="text/css" href="{{asset('/css/bootstrap.min.css')}}">
         <link type="text/css" href="{{asset('css/custom-theme/jquery-ui-1.10.0.custom.css')}}" rel="stylesheet" />
         <link type="text/css" href="{{asset('/css/font-awesome.min.css')}}" rel="stylesheet" />
+        <link rel="stylesheet" href="{{asset('css/sweetalert.css')}}">
         <!-- Script -->
         <script type="text/javascript" src="{{asset('/js/jquery.js')}}"></script>
         <script type="text/javascript" src="{{asset('/js/jquery.min.js')}}"></script>
@@ -44,10 +46,10 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
+                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        <li><a href="/form"><font color="white">Entri Data</font></a></li>
-                        <li><a href="#"><font color="white">Daftar Reklame</font></a></li>
+                        <li><a href="{{ route('pajak.index') }}"><font color="white">Entry Data</font></a></li>
+                        <li><a href="/daftar"><font color="white">Daftar Reklame</font></a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><font color="white">Master <span class="caret"></span></font></a>
                             <ul class="dropdown-menu">
@@ -77,6 +79,35 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script type="text/javascript" src="{{asset('/css/bootstrap.min.js')}}"></script>
+    {{-- <script type="text/javascript" src="{{asset('/js/bootstrap.min.js')}}"></script> --}}
+    <script type="text/javascript" src="{{asset('/js/sweetalert.min.js')}}"></script>
+    <script type="text/javascript">
+    $(document).on('click', '#delete-btn', function(e){
+        e.preventDefault();
+        var self = $(this);
+        swal({
+                    title: "Kamu yakin akan menghapus?",
+                    text: "Data tidak akan bisa kembali!",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Hapus !",
+                    closeOnConfirm: true
+                },
+                function(isConfirm){
+                    if(isConfirm){
+                        swal("Tunggu!","Sedang Menghapus", "info");
+                        setTimeout(function() {
+                            self.parents(".delete").submit();
+                        }, 1000);
+                    }
+                    else{
+                        swal("Batal","Tidak jadi menghapus", "error");
+                    }
+                });
+    });
+    </script>
+    @include('sweet::alert')
+    
 </body>
 </html>

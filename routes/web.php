@@ -11,19 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/','PajakController@daftar');
+
+Route::get('/cek', function () {
+    return view('layouts.admin');
 });
 
 Route::get('/form', function () {
     return view('pajak');
 });
 
-
+Route::get('/daftar','PajakController@daftar');
 Route::resource('jenis','JenisController');
-
 Route::resource('sudut','SudutController');
-
 Route::resource('ruang','RuangController');
-
 Route::resource('jalan','JalanController');
+Route::resource('pajak','PajakController');

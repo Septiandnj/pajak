@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\fungsijalan;
+use Alert;
 
 class JalanController extends Controller
 {
@@ -15,7 +16,7 @@ class JalanController extends Controller
     public function index()
     {
         //
-        $jalan=fungsijalan::all();
+        $jalan=fungsijalan::paginate(4);
         return view('jalan.index',compact('jalan'));
     }
 
@@ -48,7 +49,7 @@ class JalanController extends Controller
         $jalan->jalan = $request->jalan;
         $jalan->skor = $request->skor;
         $jalan->save();
-
+        Alert::success('Tambah Data', 'Berhasil')->autoclose(2000);
         return redirect('jalan');
     }
 
@@ -95,7 +96,7 @@ class JalanController extends Controller
         $jalan->jalan = $request->jalan;
         $jalan->skor = $request->skor;
         $jalan->save();
-
+        Alert::success('Mengubah Data', 'Berhasil')->autoclose(2000);
         return redirect('jalan');
     }
 
@@ -110,6 +111,7 @@ class JalanController extends Controller
         //
         $jalan = fungsijalan::findOrFail($id);
         $jalan->delete();
+        Alert::success('Menghapus Data', 'Berhasil')->autoclose(2000);
         return redirect('jalan');
     }
 }

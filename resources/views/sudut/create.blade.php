@@ -1,12 +1,21 @@
-@extends('layouts.app')
-@section('content')
-<div class="container">
-	<div class="row">
-		<center><h1>Data Sudut Pandang</h1></center>
-		<div class="panel panel-primary">
+
+
+<!-- Modal -->
+<div id="tambah" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"></button>
+        <h4 class="modal-title">Tambah Data</h4>
+      </div>
+      <div class="modal-body">
+        {{-- isi --}}
+        <div class="panel">
 			<div class="panel-heading">Tambah Data Sudut Pandang
 			<div class="panel-title pull-right">
-			<a href="{{ URL::previous() }}">Kembali</a></div></div>
+			</div></div>
 			<div class="panel-body">
 				<form action="{{route('sudut.store')}}" method="post">
 					{{csrf_field()}}
@@ -26,6 +35,14 @@
 				
 			</div>
 		</div>
-	</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
 </div>
-@endsection
+
+		
+		
