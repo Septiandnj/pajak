@@ -49,11 +49,10 @@ class PajakController extends Controller
         //
         $no=$request['no'];
         $tanggal=$request['tanggal'];
-        $nama_pemilik=$request['nama_pemilik'];
+        $pemilik=$request['pemilik'];
         $alamat=$request['alamat'];
-        $nama_perusahaan=$request['nama_perusahaan'];
-        $npdwpd=$request['npdwpd'];
-        $masa_pajak=$request['masa_pajak'];
+        $perusahaan=$request['perusahaan'];
+        $npwpd=$request['npwpd'];
         $naskah=$request['naskah'];
         $jenis=$request['name'];
         $panjang=$request['panjang'];
@@ -61,8 +60,8 @@ class PajakController extends Controller
         $ukuran=$panjang*$lebar;
         $tinggi=$request['tinggi'];
         $lokasi=$request['lokasi'];
-        $no_persil=$request['no_persil'];
-        $alamat_lengkap=$request['alamat_lengkap'];
+        $persil=$request['persil'];
+        $info_lengkap=$request['info_lengkap'];
         $sudut=$request['sudut'];
         $jalan=$request['jalan'];
         $ruang=$request['ruang'];
@@ -70,7 +69,7 @@ class PajakController extends Controller
         $muka=$request['muka'];
         $izin=$request['izin'];
         $pemasangan=$request['pemasangan'];
-        $jumlah_unit=$request['jumlah_unit'];
+        $junit=$request['junit'];
         $koordinatu=$request['koordinatu'];
         $koordinats=$request['koordinats'];
         $foto=$request['foto'];
@@ -123,17 +122,17 @@ class PajakController extends Controller
         $pajak = new entry();
         $pajak->no= $no;
         $pajak->tanggal= $tanggal;
-        $pajak->nama_pemilik= $nama_pemilik;
-        $pajak->nama_perusahaan= $nama_perusahaan;
-        $pajak->npdwpd= $npdwpd;
-        $pajak->masa_pajak= $masa_pajak;
+        $pajak->nama_pemilik= $pemilik;
+        $pajak->alamat= $alamat;
+        $pajak->nama_perusahaan= $perusahaan;
+        $pajak->npwpd= $npwpd;
         $pajak->naskah= $naskah;
         $pajak->jenis_id= $jenis;
         $pajak->ukuran= $ukuran;
         $pajak->ketinggian= $tinggi;
         $pajak->lokasi= $lokasi;
-        $pajak->no_persil= $no_persil;
-        $pajak->alamat_lengkap= $alamat_lengkap;
+        $pajak->no_persil= $persil;
+        $pajak->info_alamat_lengkap= $info_lengkap;
         $pajak->sudutpandang_id= $sudut;
         $pajak->fungsijalan_id= $jalan;
         $pajak->fungsiruang_id= $ruang;
@@ -141,7 +140,7 @@ class PajakController extends Controller
         $pajak->harga_dasar_strategis = $strategis;
         $pajak->masa_izin = $izin;
         $pajak->cara_pemasangan = $pemasangan;
-        $pajak->jumlah_unit= $jumlah_unit;
+        $pajak->jumlah_unit= $junit;
         $pajak->koordinatu= $koordinatu;
         $pajak->koordinats= $koordinats;
         $pajak->foto= $foto;

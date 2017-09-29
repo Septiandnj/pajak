@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class entry extends Model
 {
     //
-    protected $fillable=['naskah','jenis_id','ukuran','ketinggian','lokasi','sudutpandang_id','fungsijalan_id','fungsiruang_id','jumlah_muka','harga_dasar_strategis','masa_izin','cara_pemasangan'];
-    protected $visible=['naskah','jenis_id','ukuran','ketinggian','lokasi','sudutpandang_id','fungsijalan_id','fungsiruang_id','jumlah_muka','harga_dasar_strategis','masa_izin','cara_pemasangan'];
+    protected $fillable=['no','tanggal','nama_pemilik','alamat','nama_perusahaan','npwpd','naskah','lokasi','no_persil','info_alamat_lengkap','jenis_id','ukuran','ketinggian','lokasi','sudutpandang_id','fungsijalan_id','fungsiruang_id','jumlah_muka','harga_dasar_strategis','masa_izin','cara_pemasangan','jumlah_unit','koordinatu','koordinats','foto'];
+    protected $visible=['no','tanggal','nama_pemilik','alamat','nama_perusahaan','npwpd','naskah','lokasi','no_persil','info_alamat_lengkap','jenis_id','ukuran','ketinggian','lokasi','sudutpandang_id','fungsijalan_id','fungsiruang_id','jumlah_muka','harga_dasar_strategis','masa_izin','cara_pemasangan','jumlah_unit','koordinatu','koordinats','foto'];
     public $timestamps=true;
 
     public function jenis()

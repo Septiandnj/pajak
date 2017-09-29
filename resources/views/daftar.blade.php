@@ -1,17 +1,18 @@
 @extends('layouts.admin')
 @section('nav')
 <ul class="nav">
-                <li class="active">
-                    <a href="/daftar">
-                        <i class="pe-7s-file"></i>
-                        <p>Data Pajak</p>
-                    </a>
-                </li>
-                
+
                 <li>
                     <a href="/chartjs">
                         <i class="fa fa-bar-chart"></i>
                         <p>Tampilkan Grafik</p>
+                    </a>
+                </li>
+                
+                <li class="active">
+                    <a href="/daftar">
+                        <i class="pe-7s-file"></i>
+                        <p>Data Pajak</p>
                     </a>
                 </li>
        

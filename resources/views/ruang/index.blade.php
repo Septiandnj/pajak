@@ -1,6 +1,13 @@
 @extends('layouts.admin')
 @section('nav')
 <ul class="nav">
+				<li>
+                    <a href="/chartjs">
+                        <i class="fa fa-bar-chart"></i>
+                        <p>Tampilkan Grafik</p>
+                    </a>
+                </li>
+
                 <li>
                     <a href="/daftar">
                         <i class="pe-7s-file"></i>
@@ -8,14 +15,6 @@
                     </a>
                 </li>
 
-                <li>
-                    <a href="/chartjs">
-                        <i class="fa fa-bar-chart"></i>
-                        <p>Tampilkan Grafik</p>
-                    </a>
-                </li>
-       
-       
                 <li class="dropdown active">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
                               <i class="pe-7s-note2"></i>

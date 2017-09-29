@@ -25,26 +25,22 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="">Nama Pemilik </label>
-                                    <input type="text" name="nama_pemilik" class="form-control" placeholder="example" required>
+                                    <input type="text" name="pemilik" class="form-control" placeholder="example" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Alamat Lengkap </label>
+                                    <label for="">Alamat </label>
                                     <input type="text" name="alamat" class="form-control" placeholder="jl.example" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Nama Perusahaan </label>
-                                    <input type="text" name="nama_perusahaan" class="form-control" placeholder="example" required>
+                                    <input type="text" name="perusahaan" class="form-control" placeholder="example" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="">NPWPD </label>
-                                    <input type="text" name="npwpd" class="form-control" placeholder="example : 123" required>
+                                    <input type="text" name="npwpd" class="form-control" placeholder="example : 123">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Masa Pajak </label>
-                                    <input type="text" name="naskah" class="form-control" placeholder="example" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Naskah </label>
+                                    <label for="">Naskah Reklame </label>
                                     <input type="text" name="naskah" class="form-control" placeholder="example" required>
                                 </div>
                                 <div class="form-group">
@@ -53,11 +49,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="">No.Persil </label>
-                                    <input type="text" name="no_persil" class="form-control" placeholder="example : 1" required>
+                                    <input type="text" name="persil" class="form-control" placeholder="example : 1" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Alamat Lengkap </label>
-                                    <input type="text" name="alamat_lengkap" class="form-control" placeholder="example" required>
+                                    <input type="text" name="info_lengkap" class="form-control" placeholder="jl.example" required>
                                 </div>
                                  <div class="form-group">
                                     <label for="">Cara Pemasangan </label>
@@ -138,15 +134,15 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="">Jumlah Unit Terpasang </label>
-                                    <input type="number" name="jumlah_unit" class="form-control" placeholder="example : 1" required>
+                                    <input type="number" name="junit" class="form-control" placeholder="example : 1" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Koordinat </label>
                                     <div class="form-group">
-                                        <input type="float" name="Koordinatu" class="form-control" placeholder="koordinat : U" required> 
+                                        <input type="float" name="koordinatu" class="form-control" placeholder="koordinat : U" required> 
                                         <br>
                                         <center><i class="form-group"></i></center>
-                                        <input type="float" name="Koordinats" class="form-control" placeholder="koordinat : S" required>
+                                        <input type="float" name="koordinats" class="form-control" placeholder="koordinat : S" required>
                                     </div>
                                 <div class="form-group">
                                     <label for="">Harga dasar stategis</label>
