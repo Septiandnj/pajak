@@ -15,6 +15,13 @@ class CreateEntriesTable extends Migration
     {
         Schema::create('entries', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('no');
+            $table->date('tanggal');
+            $table->string('nama_pemilik');
+            $table->text('alamat');
+            $table->string('nama_perusahaan');
+            $table->string('npwpd')->nullable();
+            $table->string('masa_pajak');
             $table->string('naskah');
             $table->integer('jenis_id')->unsigned();
             $table->foreign('jenis_id')->references('id')
@@ -23,6 +30,8 @@ class CreateEntriesTable extends Migration
             $table->float('ukuran');
             $table->float('ketinggian');
             $table->text('lokasi');
+            $table->string('no_persil');
+            $table->text('alamat_lengkap');
             $table->integer('sudutpandang_id')->unsigned();
             $table->foreign('sudutpandang_id')->references('id')
                   ->on('sudutpandangs')->onUpdate('cascade')
@@ -39,6 +48,10 @@ class CreateEntriesTable extends Migration
             $table->integer('harga_dasar_strategis');
             $table->string('masa_izin');
             $table->string('cara_pemasangan');
+            $table->integer('jumlah_unit');
+            $table->integer('koordinatu');
+            $table->integer('koordinats');
+            $table->integer('foto')->nullable();
             $table->decimal('njor', 15, 2);
             $table->decimal('nspr', 15, 2);
             $table->decimal('nsr', 15, 2);

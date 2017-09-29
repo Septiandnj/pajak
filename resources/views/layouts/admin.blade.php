@@ -47,7 +47,7 @@
     -->
     	<div class="sidebar-wrapper">
             <div class="logo">
-                <a href="/daftar" class="simple-text">
+                <a href="/" class="simple-text">
                     Pajak Reklame
                 </a>
             </div>
@@ -124,6 +124,8 @@
 
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<script src="{{asset('/assets/js/demo.js')}}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
 
 	
     <script type="text/javascript" src="{{asset('/js/sweetalert.min.js')}}"></script>

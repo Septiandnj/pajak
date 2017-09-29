@@ -7,7 +7,13 @@
                         <p>Data Pajak</p>
                     </a>
                 </li>
-       
+                
+                <li>
+                    <a href="/chartjs">
+                        <i class="fa fa-bar-chart"></i>
+                        <p>Tampilkan Grafik</p>
+                    </a>
+                </li>
        
                 <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown" >

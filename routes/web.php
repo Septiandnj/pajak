@@ -27,3 +27,4 @@ Route::resource('sudut','SudutController');
 Route::resource('ruang','RuangController');
 Route::resource('jalan','JalanController');
 Route::resource('pajak','PajakController');
+Route::resource('chartjs','ChartjsController');

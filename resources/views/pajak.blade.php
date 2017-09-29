@@ -16,11 +16,84 @@
                 <form action="{{route('pajak.store')}}" method="post">
                             {{csrf_field()}}
                                 <div class="form-group">
+                                    <label for="">No </label>
+                                    <input type="number" name="no" class="form-control" placeholder="example : 1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Tanggal Daftar </label>
+                                    <input type="date" name="tanggal" class="form-control" placeholder="example" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Nama Pemilik </label>
+                                    <input type="text" name="nama_pemilik" class="form-control" placeholder="example" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Alamat Lengkap </label>
+                                    <input type="text" name="alamat" class="form-control" placeholder="jl.example" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Nama Perusahaan </label>
+                                    <input type="text" name="nama_perusahaan" class="form-control" placeholder="example" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">NPWPD </label>
+                                    <input type="text" name="npwpd" class="form-control" placeholder="example : 123" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Masa Pajak </label>
+                                    <input type="text" name="naskah" class="form-control" placeholder="example" required>
+                                </div>
+                                <div class="form-group">
                                     <label for="">Naskah </label>
                                     <input type="text" name="naskah" class="form-control" placeholder="example" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Jenis </label>
+                                    <label for="">Lokasi Pemasangan</label>
+                                    <input type="text" name="lokasi" class="form-control" placeholder="Jl.example" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">No.Persil </label>
+                                    <input type="text" name="no_persil" class="form-control" placeholder="example : 1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Alamat Lengkap </label>
+                                    <input type="text" name="alamat_lengkap" class="form-control" placeholder="example" required>
+                                </div>
+                                 <div class="form-group">
+                                    <label for="">Cara Pemasangan </label>
+                                        <select name="pemasangan" class="form-control" required>
+                                            <option value="">-</option>
+                                            <option value="Di Pancang">Di Pancang</option>
+                                            <option value="Di Tempel">Di Tempel</option>
+                                            <option value="Di Berm">Di Berm</option>
+                                            <option value="Di Atas Gedung">Di Atas gedung</option>
+                                        </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Ukuran </label>
+                                    <div class="form-group">
+                                        <input type="float" name="panjang" class="form-control" placeholder="panjang (m)" required>
+                                    
+                                        <center><i class="fa fa-times"></i></center>
+                                        <input type="float" name="lebar" class="form-control" placeholder="lebar (m)" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Ketinggian </label>
+                                    <input type="float" name="tinggi" class="form-control" placeholder="tinggi (m)" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Jumlah Muka </label>
+                                        <select name="muka" class="form-control" required>
+                                            <option value="">-</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Jenis Reklame</label>
                                     <select name="name" class="form-control" required="">
                                         <option value="">-</option>
                                         @foreach($jenis as $data)
@@ -29,25 +102,6 @@
                                          </option>
                                         @endforeach
                                      </select>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="">Ukuran </label>
-                                    <div class="form-group">
-                                        <input type="float" name="panjang" class="form-control" placeholder="panjang (m)" required>
-                                    
-                                        <center><i class="fa fa-times"></i></center>
-                                        <input type="float" name="lebar" class="form-control" placeholder="lebar (m)" required>
-                                    
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Ketinggian </label>
-                                    <input type="float" name="tinggi" class="form-control" placeholder="tinggi (m)" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Lokasi </label>
-                                    <input type="text" name="lokasi" class="form-control" placeholder="Jl.example" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Sudut Pandang </label>
@@ -83,9 +137,17 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Jumlah Muka </label>
-                                    <input type="number" name="muka" class="form-control" placeholder="example : 1" required>
+                                    <label for="">Jumlah Unit Terpasang </label>
+                                    <input type="number" name="jumlah_unit" class="form-control" placeholder="example : 1" required>
                                 </div>
+                                <div class="form-group">
+                                    <label for="">Koordinat </label>
+                                    <div class="form-group">
+                                        <input type="float" name="Koordinatu" class="form-control" placeholder="koordinat : U" required> 
+                                        <br>
+                                        <center><i class="form-group"></i></center>
+                                        <input type="float" name="Koordinats" class="form-control" placeholder="koordinat : S" required>
+                                    </div>
                                 <div class="form-group">
                                     <label for="">Harga dasar stategis</label>
                                     <input type="number" name="strategis" class="form-control" placeholder="Rp.00,00" required>
@@ -93,10 +155,6 @@
                                 <div class="form-group">
                                     <label for="">Masa Izin </label>
                                     <input type="string" name="izin" class="form-control" placeholder="Pertahun" value="pertahun" readonly="" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Cara Pemasangan </label>
-                                    <input type="text" name="pemasangan" class="form-control" placeholder="example" required>
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" name="kirim" value="Submit" class="btn btn-primary">
